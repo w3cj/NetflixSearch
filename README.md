@@ -12,7 +12,8 @@ Include the script in your page:
 ```
 
 ```js
-// Netflix search accepts 2 parameters, movie title and page number, page number is optional
+// Netflix search accepts 2 parameters:
+// query and page number (page number is optional)
 
 // Search for a specific title
 Netflix.search("Dude Where's My Car?").done(function(movies){

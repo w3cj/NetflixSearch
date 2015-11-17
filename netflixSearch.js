@@ -5,6 +5,7 @@ Netflix = {
     page = page ? page : 1;
 
     var yql_url = 'https://query.yahooapis.com/v1/public/yql';
+    // TODO parameterize hardcoded options
     var url = ['http://instantwatcher.com/search?sort=available_from+desc&view=synopsis&infinite=on&average_rating=&year=&runtime=&content_type%5B%5D=1&language_audio=&layout=none&page=', page, '&q=', search.split(' ').join('+') ].join('');
     var query = ['SELECT * FROM html WHERE url="', url, '" and xpath="//div[@class=', "'", 'iw-title list-title box-synopsis-mode', "'", ']"'].join('');
 
