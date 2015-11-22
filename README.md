@@ -22,7 +22,7 @@ Netflix.search("Dude Where's My Car?").done(function(movies){
 ```sh
 [{
   "image": "http://cdn0.nflximg.net/images/1442/23711442.jpg",
-  "title": "Dude, Where&#39;s My Car?",
+  "title": "Dude, Where's My Car?",
   "year": "2000",
   "netflix_url": "http://www.netflix.com/watch/60004019",
   "average_rating": "3.2",

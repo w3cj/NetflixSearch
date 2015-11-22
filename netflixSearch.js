@@ -34,9 +34,13 @@ Netflix = {
       function getMovieFromDiv(movieDiv) {
         var movie = {
           image: movieDiv.a.img ? movieDiv.a.img.src : '',
-          title: movieDiv.span[0].a.content,
+          title: cleanText(movieDiv.span[0].a.content),
           year: movieDiv.span[1].a.content,
           netflix_url: movieDiv.span[2].a[0].href
+        }
+
+        function cleanText(text){
+          return $('<div />').html(text).text();
         }
 
         var otherData = movieDiv.span[2].span;
