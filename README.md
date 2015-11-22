@@ -1,5 +1,5 @@
 # Netflix search
-Uses [YQL](Yahoo Query Language) to retrieve [instantwatcher.com](http://instantwatcher.com) search results. Parses search results (minimaly) into an array of movie objects.
+Uses [Yahoo Query Language](https://developer.yahoo.com/yql/console/#h=select+*+from+html+where+url%3D%22http%3A%2F%2Finstantwatcher.com%2Fsearch%3Fsort%3Davailable_from%2Bdesc%26view%3Dsynopsis%26infinite%3Don%26average_rating%3D%26year%3D%26runtime%3D%26content_type%255B%255D%3D1%26language_audio%3D%26layout%3Dnone%26page%3D1%26q%3D%22+and+xpath%3D%22%2F%2Fdiv%5B%40class%3D'iw-title+list-title+box-synopsis-mode'%5D%22) to retrieve [instantwatcher.com](http://instantwatcher.com) search results. Parses search results (minimaly) into an array of movie objects.
 
 ![instantwatcher results](http://i.imgur.com/oBhZFl5.png)
 
