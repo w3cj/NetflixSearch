@@ -1,5 +1,38 @@
 # Netflix search
-Uses YQL to parse instantwatcher.com results.
+Uses [YQL](Yahoo Query Language) to retrieve [instantwatcher.com](http://instantwatcher.com) search results. Parses search results (minimaly) into an array of movie objects.
+
+![instantwatcher results](http://i.imgur.com/oBhZFl5.png)
+
+Each movie object will have at least the following properties:
+
+![instantwatcher results](http://i.imgur.com/lrubZb0.png)
+
+```js
+{
+  "image": "http://cdn0.nflximg.net/images/1442/23711442.jpg",
+  "title": "Dude, Where's My Car?",
+  "year": "2000",
+  "netflix_url": "http://www.netflix.com/watch/60004019"
+}
+```
+
+Other properties are added dynamically based on the class name of the html, but commonly include:
+
+```js
+{
+  "average_rating": "3.2",
+  "rt-score": ["18%", "47%"],
+  "nyt-review-available": "NYT Review",
+  "maturity_rating_level": "PG-13",
+  "quality": "SuperHD",
+  "synopsis": "Two hard-partying pizza delivery dudes wake up with no recollection of what happened the previous night -- including where they parked their car.",
+  "actors": "Ashton Kutcher, Seann William Scott, Jennifer Garner, Marla Sokoloff",
+  "directors": "Danny Leiner",
+  "runtime": "83 minutes",
+  "available-from": "Nov 16, 2015",
+  "queue-count": "557"
+}
+```
 
 Requires jQuery
 
@@ -13,6 +46,7 @@ Include the script in your page:
 ```js
 // Netflix search accepts 2 parameters:
 // query and page number (page number is optional)
+// returns an array of movie objects
 
 // Search for a specific title
 Netflix.search("Dude Where's My Car?").done(function(movies){
